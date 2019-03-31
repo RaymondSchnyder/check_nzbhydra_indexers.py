@@ -39,6 +39,7 @@ try:
 except(requests.exceptions.MissingSchema):
     print("Your URL is missing http:// or https://")
     exit(1)
+exitstatus=0
 try:
     for item in r.json():
         if item["state"] == "DISABLED_SYSTEM_TEMPORARY":
