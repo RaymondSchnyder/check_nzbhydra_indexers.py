@@ -2,7 +2,7 @@
 import requests, pprint, json, re
 
 try:
-    with open("config.json") as config_file:
+    with open("./config.json") as config_file:
         try:
             config = json.load(config_file)
         except(json.decoder.JSONDecodeError):
