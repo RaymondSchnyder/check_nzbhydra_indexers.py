@@ -1,0 +1,4 @@
+*
+!.gitignore
+!config.json.example
+!check_nzbhydra_indexers.py

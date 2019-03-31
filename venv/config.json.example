@@ -1,0 +1,5 @@
+{
+    "uri": "https://example.com/nzbhydra/api/stats/indexers",
+	"username": "username",
+	"password": "password"
+}
