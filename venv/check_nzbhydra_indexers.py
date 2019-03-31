@@ -10,8 +10,7 @@ try:
 except getopt.GetoptError as err:
     # print help information and exit:
     print(err)  # will print something like "option -a not recognized"
-    usage()
-    sys.exit(2)
+    sys.exit(1)
 
 for o, a in opts:
     if o in ["-s", '--site']:
@@ -24,13 +23,13 @@ for o, a in opts:
             assert False, "unhandled option"
 
 if uri is "":
-    print("you forgot to provide the site uri")
+    print("you forgot to provide the site uri with --site")
     exit(1)
 elif username is "":
-    print("you forgot to provide the username")
+    print("you forgot to provide the username with --username")
     exit(1)
 elif password is "":
-    print("you forgot to provide the password")
+    print("you forgot to provide the password with --password")
     exit(1)
 
 
@@ -57,9 +56,6 @@ except(AttributeError):
 except(json.decoder.JSONDecodeError):
     print("ERROR: JSON could not be decoded!")
     exit(1)
-exit(0)
 
-def usage():
-    print("--site | -s specify site uri (https://example.com/nzbhydra/stats/indexers")
-    print("--username | -u specify username (example) ")
-    print("--password | -p specify user password (password)")
+print("everything seems alright :)")
+exit(0)
